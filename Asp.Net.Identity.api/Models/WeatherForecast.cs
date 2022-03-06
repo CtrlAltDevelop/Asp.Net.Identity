@@ -1,4 +1,4 @@
-namespace Asp.Net.Identity.api
+namespace Asp.Net.Identity.api.Models
 {
     public class WeatherForecast
     {
