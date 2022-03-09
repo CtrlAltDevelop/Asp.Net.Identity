@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Asp.Net.Identity.api.Models;
 using Microsoft.AspNetCore.Authorization;
+using System.Security.Claims;
 
 namespace Asp.Net.Identity.api.Controllers
 {
@@ -24,6 +25,8 @@ namespace Asp.Net.Identity.api.Controllers
         [HttpGet(Name = "GetWeatherForecast")]
         public IEnumerable<WeatherForecast> Get()
         {
+            var userID = User.FindFirst(ClaimTypes.NameIdentifier);
+
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateTime.Now.AddDays(index),
