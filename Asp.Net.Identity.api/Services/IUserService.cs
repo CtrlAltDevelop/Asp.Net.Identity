@@ -104,7 +104,8 @@ public class UserService : IUserService
         return new UserManagerResponse
         {
             Message = toketAsString,
-            IsSuccess = true
+            IsSuccess = true,
+            ExpireDate = token.ValidTo
         };
     }
 }

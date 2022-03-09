@@ -7,4 +7,6 @@ public class UserManagerResponse
     public bool IsSuccess { get; set; }
 
     public IEnumerable<string> Error { get; set; }
+
+    public DateTime? ExpireDate { get; set; }
 }
